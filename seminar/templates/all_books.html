@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Книги которые у нас есть</h1>
+<div class="row">
+    {% for bk in books%}
+    <p class="col-12 col-md-6">
+        Название книги: {{ bk.book_name }},
+        Количество экземпляров: {{ bk.book_count }},
+        Год выпуска книги: {{ bk.book_year }}
+        Автор: {{ bk.authors.au_id }}
+    </p>
+    {% endfor %}
+</div>
+</body>
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+</html>

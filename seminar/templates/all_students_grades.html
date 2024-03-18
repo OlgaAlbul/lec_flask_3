@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Успеваемость студентов по предметам</h1>
+<div class="row">
+    {% for gr in grades%}
+    <p class="col-12 col-md-6">
+        Предмет: {{ gr.subject_name }},<br>
+        Студент: {{ gr.students.st_name }} {{ gr.students.st_last_name }},<br>
+        Оценка: {{ gr.grade }}<br>
+
+    </p>
+    {% endfor %}
+</div>
+</body>
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+</html>
